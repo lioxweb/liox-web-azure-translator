@@ -2,6 +2,19 @@
 
 All notable changes to **LioX Web Azure Translator for TranslatePress** are documented in this file.
 
+## [1.1.3] - 2026-09-08
+
+### Fixed
+
+- Resolved all warnings reported by WordPress Plugin Check.
+- Improved variable prefixing in uninstall routines.
+- Documented intentional direct database operations.
+- Shortened the WordPress.org plugin short description.
+
+### Changed
+
+- Updated plugin metadata for WordPress.org submission.
+
 ## [1.1.1] - 2026-09-08
 
 ### Fixed
