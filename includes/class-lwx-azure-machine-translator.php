@@ -251,7 +251,7 @@ class LWX_Azure_Machine_Translator extends TRP_Machine_Translator {
                 'lwx_azure_monthly_limit_reached',
                 sprintf(
                     /* translators: 1: characters already used, 2: configured monthly hard limit. */
-                    __( 'LioX Web Azure monthly hard limit reached (%1$s / %2$s characters). No request was sent to Microsoft Azure.', 'liox-azure-translator' ),
+                    __( 'LioX Web Azure monthly hard limit reached (%1$s / %2$s characters). No request was sent to Microsoft Azure.', 'liox-web-azure-translator-for-translatepress' ),
                     number_format_i18n( $used ),
                     number_format_i18n( $monthly_limit )
                 )
@@ -415,7 +415,7 @@ class LWX_Azure_Machine_Translator extends TRP_Machine_Translator {
 
         if ( empty( $this->get_api_key() ) ) {
             $this->correct_api_key = array(
-                'message' => __( 'Please enter your Azure Translator API key.', 'liox-azure-translator' ),
+                'message' => __( 'Please enter your Azure Translator API key.', 'liox-web-azure-translator-for-translatepress' ),
                 'error'   => true,
             );
             return $this->correct_api_key;
@@ -444,7 +444,7 @@ class LWX_Azure_Machine_Translator extends TRP_Machine_Translator {
         if ( is_wp_error( $response ) ) {
             $message = sprintf(
                 /* translators: %s: WordPress HTTP error. */
-                __( 'Azure connection error: %s', 'liox-azure-translator' ),
+                __( 'Azure connection error: %s', 'liox-web-azure-translator-for-translatepress' ),
                 $response->get_error_message()
             );
             $this->cache_validation_result( false, $message, 300 );
@@ -748,22 +748,22 @@ class LWX_Azure_Machine_Translator extends TRP_Machine_Translator {
 
         switch ( (int) $code ) {
             case 400:
-                $message = __( 'Azure rejected the request. Check the endpoint, region and language configuration.', 'liox-azure-translator' );
+                $message = __( 'Azure rejected the request. Check the endpoint, region and language configuration.', 'liox-web-azure-translator-for-translatepress' );
                 break;
             case 401:
             case 403:
-                $message = __( 'Azure authentication failed. Check the API key and, for regional resources, the Azure Region.', 'liox-azure-translator' );
+                $message = __( 'Azure authentication failed. Check the API key and, for regional resources, the Azure Region.', 'liox-web-azure-translator-for-translatepress' );
                 break;
             case 429:
-                $message = __( 'Azure rate or quota limit was reached.', 'liox-azure-translator' );
+                $message = __( 'Azure rate or quota limit was reached.', 'liox-web-azure-translator-for-translatepress' );
                 break;
             case 404:
-                $message = __( 'Azure Translator endpoint was not found. Check the Endpoint setting.', 'liox-azure-translator' );
+                $message = __( 'Azure Translator endpoint was not found. Check the Endpoint setting.', 'liox-web-azure-translator-for-translatepress' );
                 break;
             default:
                 $message = sprintf(
                     /* translators: %d: HTTP status code. */
-                    __( 'Azure Translator returned HTTP %d.', 'liox-azure-translator' ),
+                    __( 'Azure Translator returned HTTP %d.', 'liox-web-azure-translator-for-translatepress' ),
                     (int) $code
                 );
                 break;
