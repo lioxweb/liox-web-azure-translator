@@ -38,7 +38,5 @@ This plugin adds Microsoft Azure Translator as an automatic translation engine f
 
 The plugin includes a configurable monthly translation limit.
 
-Default:
-
-```text
-1,900,000 characters per calendar month
+Default: 1,900,000 characters per calendar month
+Set the value to 0 to disable the plugin-level monthly limit.
