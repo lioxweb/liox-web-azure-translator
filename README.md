@@ -7,16 +7,16 @@ This plugin adds Microsoft Azure Translator as an automatic translation engine f
 ## Features
 
 - Microsoft Azure Translator integration
-- API Key, Region and Endpoint settings
-- Support for multiple target languages
-- Monthly translation safety limit
-- Current monthly usage tracking
-- Automatic reset of monthly usage counter
+- API Key, Region and Endpoint configuration
+- Multiple target language support
 - Compatible with existing TranslatePress translations
 - Existing translations are not overwritten
-- New untranslated strings can be translated automatically
-- API credential testing
+- Automatically translates new untranslated strings
 - Batch translation support
+- API credential testing
+- Configurable monthly character limit
+- Monthly usage tracking
+- Automatic monthly usage counter reset
 
 ## Requirements
 
@@ -27,17 +27,52 @@ This plugin adds Microsoft Azure Translator as an automatic translation engine f
 ## Installation
 
 1. Download the plugin ZIP.
-2. Go to **WordPress → Plugins → Add New → Upload Plugin**.
-3. Upload and activate the plugin.
-4. Go to **Settings → TranslatePress → Automatic Translation**.
-5. Select **Microsoft Azure Translator (LioX Web)**.
-6. Enter your Azure API Key, Region and Endpoint.
-7. Save the settings.
+2. In WordPress, go to **Plugins → Add New → Upload Plugin**.
+3. Upload the ZIP file.
+4. Activate the plugin.
+5. Go to **Settings → TranslatePress → Automatic Translation**.
+6. Select **Microsoft Azure Translator (LioX Web)** as the translation engine.
+7. Enter your Azure API Key, Azure Region and Azure Endpoint.
+8. Save the settings.
 
-## Monthly Safety Limit
+## Monthly Character Limit
 
-The plugin includes a configurable monthly translation limit.
+The plugin includes a configurable monthly safety limit for Azure translation requests.
 
-Default: 1,900,000 characters per calendar month
+The default value is **1,900,000 characters per calendar month**.
 
-Set the value to 0 to disable the plugin-level monthly limit.
+Set the value to **0** to disable the plugin-level monthly limit.
+
+The plugin displays:
+
+- Characters used during the current month
+- Monthly limit
+- Remaining characters
+
+The counter resets automatically when a new calendar month begins.
+
+## Existing Translations
+
+Existing translations stored by TranslatePress are not overwritten.
+
+The Azure translation engine is used only when TranslatePress requests translation for strings that do not already have a stored translation.
+
+This allows existing translations created with another translation engine to remain unchanged while Azure Translator handles new untranslated content.
+
+## Security
+
+Never publish your Microsoft Azure API Key in a public repository.
+
+API credentials are stored through the WordPress and TranslatePress settings and are not included in the plugin source code.
+
+If an API key is accidentally exposed, regenerate it immediately from the Microsoft Azure portal.
+
+## License
+
+GPL-2.0-or-later
+
+## Author
+
+**LioX Web**
+
+https://lioxweb.com/
