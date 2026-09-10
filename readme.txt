@@ -1,10 +1,10 @@
-=== LioX Web Azure Translator for TranslatePress ===
+=== LioX Web Translation Engine with Microsoft Azure Translator for TranslatePress ===
 Contributors: lioxweb
 Tags: translatepress, azure, translator, translation, multilingual
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Adds Microsoft Azure Translator as an automatic translation engine for Translate
 
 == Description ==
 
-LioX Web Azure Translator for TranslatePress adds Microsoft Azure Translator as an automatic translation engine inside TranslatePress.
+LioX Web Translation Engine with Microsoft Azure Translator for TranslatePress adds Microsoft Azure Translator as an automatic translation engine inside TranslatePress.
 
 The plugin is intended for site owners who already use TranslatePress and want to use their own Microsoft Azure Translator resource for new automatic translations.
 
@@ -32,7 +32,7 @@ Features include:
 
 This plugin requires TranslatePress and a Microsoft Azure Translator resource configured by the site administrator.
 
-Development repository: https://github.com/lioxweb/liox-web-azure-translator
+Development repository: https://github.com/lioxweb/liox-web-translation-engine-for-translatepress
 
 == Installation ==
 
@@ -105,6 +105,10 @@ See the External Service section above for information about data sent to Micros
 * The local monthly counter only tracks requests made by this WordPress installation.
 
 == Changelog ==
+
+= 1.1.4 =
+* Renamed the plugin to clarify that it is a third-party integration with Microsoft Azure Translator for TranslatePress.
+* Updated the WordPress.org-compatible slug, text domain, main plugin filename and development repository URL.
 
 = 1.1.3 =
 * Cleaned WordPress Plugin Check warnings before directory review.
