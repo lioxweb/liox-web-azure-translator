@@ -2,6 +2,16 @@
 
 All notable changes to **LioX Web Azure Translator for TranslatePress** are documented in this file.
 
+## [1.1.4] - 2026-09-11
+
+### Changed
+
+- Renamed the plugin to **LioX Web Translation Engine with Microsoft Azure Translator for TranslatePress**.
+- Updated the plugin slug to `liox-web-translation-engine-for-translatepress`.
+- Updated the plugin text domain and main plugin filename.
+- Updated repository references to the new GitHub repository URL.
+- Updated WordPress.org submission metadata to address naming and trademark guidance.
+
 ## [1.1.3] - 2026-09-08
 
 ### Fixed
